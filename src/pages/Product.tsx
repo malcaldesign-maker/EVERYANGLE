@@ -1,29 +1,35 @@
 import { motion } from 'motion/react';
-import { Users, LayoutGrid, Clock, TrendingUp, ArrowRight, ShieldCheck, Cpu, Zap, Network, BarChart3 } from 'lucide-react';
+import { Users, LayoutGrid, Clock, TrendingUp, ArrowRight, ShieldCheck, Zap, Network, BarChart3 } from 'lucide-react';
+import { useMeta } from '../hooks/useMeta';
 
 export default function Product() {
+  useMeta({
+    title: 'Platform — EVERYANGLE',
+    description:
+      'A single enterprise platform that turns existing global camera footprints into decision-grade retail intelligence: traffic, conversion, queues, and zone insight.',
+  });
   const modules = [
     {
       title: "Traffic & Arrivals",
-      desc: "Accurate hourly footfall by zone. Understand when customers arrive, dwell, and leave across your entire site.",
+      desc: "Forget the turnstile. Accurate footfall by hour and by zone — minus staff, minus minors, minus the noise.",
       icon: <Users size={24} />,
       color: "from-brand-primary/20 to-brand-primary/5"
     },
     {
       title: "Conversion & Store Performance",
-      desc: "Connect footfall directly to transactions to see true conversion rates, not estimates based on guesswork.",
+      desc: "Footfall × POS = real conversion. No more dividing receipts by a guess and calling it a number.",
       icon: <BarChart3 size={24} />,
       color: "from-brand-secondary/20 to-brand-secondary/5"
     },
     {
       title: "Queue & Service Pressure",
-      desc: "Spot queue build-up in real time. Reduce wait times, protect sales, and maintain customer satisfaction scores.",
+      desc: "We see queues forming a minute before anyone walks. Floor managers get the alert. Tills open. Customers don't leave.",
       icon: <Clock size={24} />,
       color: "from-brand-accent/20 to-brand-accent/5"
     },
     {
       title: "Zone & Layout Insight",
-      desc: "See which zones engage and which don't. Test layout changes and validate them with real before/after behavioral data.",
+      desc: "Which rack pulls. Which endcap dies. Test a layout in five sites, hold the rest, see the lift in seven days.",
       icon: <LayoutGrid size={24} />,
       color: "from-brand-violet/20 to-brand-violet/5"
     }
@@ -38,14 +44,14 @@ export default function Product() {
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} className="lg:w-1/2">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-10">
-                Horizon Platform V4
+                Vision AI · Agentic AI · One Platform
               </div>
               <h1 className="font-display text-7xl md:text-9xl font-bold mb-10 tracking-tight leading-[0.9] italic text-white">
-                Vision <br />
-                <span className="text-brand-primary">Engaged.</span>
+                See it. <br />
+                <span className="text-brand-primary">Fix it.</span>
               </h1>
               <p className="text-xl md:text-2xl text-slate-400 leading-relaxed font-medium mb-12">
-                A single enterprise platform that turns existing global camera footprints into decision-grade intelligence.
+                Four modules. One data layer. Vision AI watches the floor. Agentic AI takes the action. Plugged into the cameras you already own — running in days, not months.
               </p>
               <div className="flex flex-wrap gap-4">
                  <div className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-2xl group hover:border-brand-accent transition-colors">
@@ -122,9 +128,9 @@ export default function Product() {
            <div className="grid lg:grid-cols-2 gap-24 items-center">
               <div>
                  <p className="text-brand-primary text-[10px] font-black uppercase tracking-[0.4em] mb-8">Infrastructure</p>
-                 <h2 className="font-display text-4xl md:text-6xl font-bold mb-10 italic text-white">Smart intelligence <br /> <span className="text-brand-primary">without the friction.</span></h2>
+                 <h2 className="font-display text-4xl md:text-6xl font-bold mb-10 italic text-white">No new sensors. <br /> <span className="text-brand-primary">No vendor circus.</span></h2>
                  <p className="text-lg text-slate-400 font-medium mb-12">
-                    EVERYANGLE runs natively on your existing hardware. No expensive hardware program required. No new vendor complexity at the sensing layer. Just pure intelligence.
+                    EVERYANGLE runs on the cameras you already own. We don't ship hardware. We don't run cabling. We don't replace anything. We turn existing infrastructure into a sensor network the rest of your business can use.
                  </p>
                  
                  <div className="space-y-8">

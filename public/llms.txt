@@ -1,0 +1,27 @@
+# EVERYANGLE
+
+> EVERYANGLE is an enterprise computer-vision platform that turns existing CCTV and IP cameras into a real-time intelligence layer for retail stores. We measure footfall, conversion, queue pressure, dwell, demographic split, and labor utilisation — all on infrastructure the retailer already owns.
+
+EVERYANGLE is headquartered in Dublin, Ireland and works with global retailers across Europe, the UK, and North America. The platform is GDPR-safe by design, using anonymized skeletal-frame tracking with no facial recognition.
+
+## Key facts
+- **What we do:** turn existing cameras into a real-time retail operating layer
+- **Who we serve:** enterprise retailers, typically 50+ stores
+- **What it costs to start:** 14-day setup, 4-week pilot, then SaaS
+- **Documented outcome:** 26x ROI as a master metric across rollouts
+- **Privacy posture:** anonymized skeletal tracking, no PII, no facial recognition
+- **Hardware required:** none — works on existing CCTV / Meraki / Cisco
+- **HQ:** Dublin, Ireland
+
+## Pages
+- [Home](/): overview and signature live store demo
+- [Platform](/product): the four product modules — traffic, conversion, queues, layout
+- [Intelligence](/intelligence): how the computer vision works under the hood
+- [Case Studies](/case-studies): real customer outcomes
+- [Field Notes](/blog): essays on Vision AI in physical retail
+- [Company](/company): team, values, and founding story
+- [Contact](/contact): pilots, demos, partnerships
+
+## Contact
+- hello@everyangle.ai
+- Dublin / London / New York

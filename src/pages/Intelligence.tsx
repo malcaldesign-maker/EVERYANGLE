@@ -1,8 +1,23 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Brain, Eye, Zap, Shield, Cpu, Network } from 'lucide-react';
+import { Brain, Eye, Zap, Shield, Cpu } from 'lucide-react';
+import type { ElementType } from 'react';
+import { useMeta } from '../hooks/useMeta';
 
 export default function Intelligence() {
+  useMeta({
+    title: 'Intelligence — EVERYANGLE',
+    description:
+      'How EVERYANGLE turns the chaos of human movement into precise digital data: 98%+ accuracy, integrity protocols, demographic segmentation, and skeletal-frame anonymization.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'The Intelligence Behind the Glass',
+      description:
+        'A technical overview of EVERYANGLE\'s computer-vision platform: accuracy benchmarks, audit protocols, and demographic segmentation.',
+      author: { '@type': 'Organization', name: 'EVERYANGLE' },
+    },
+  });
   const techStack = [
     {
       title: "Decision-Grade Accuracy",
@@ -41,11 +56,14 @@ export default function Intelligence() {
             transition={{ duration: 1 }}
           >
             <h1 className="font-display text-6xl md:text-8xl font-bold mb-10 tracking-tight leading-[0.9] text-white">
-              The Intelligence <br />
-              <span className="text-brand-primary italic">Behind the Glass.</span>
+              Counting people <br />
+              <span className="text-brand-primary italic">isn't intelligence.</span>
             </h1>
+            <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto leading-relaxed font-medium mb-4">
+              <span className="text-white">Vision AI</span> watches movement, dwell, intent and friction — anonymously, on existing cameras.
+            </p>
             <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto leading-relaxed font-medium">
-              We translate the chaos of human movement into the precision of digital data using state-of-the-art computer vision.
+              <span className="text-white">Agentic AI</span> turns it into the action a store manager can take before lunch.
             </p>
           </motion.div>
         </div>
@@ -84,9 +102,9 @@ export default function Intelligence() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-24">
              <p className="text-brand-accent text-[10px] font-black uppercase tracking-[0.4em] mb-8">What we measure</p>
-             <h2 className="font-display text-5xl md:text-7xl font-bold mb-10 italic text-white">Four layers of <br /> <span className="text-brand-accent">operational insight.</span></h2>
+             <h2 className="font-display text-5xl md:text-7xl font-bold mb-10 italic text-white">Six signals. <br /> <span className="text-brand-accent">Zero guesswork.</span></h2>
              <p className="text-xl text-slate-400 max-w-2xl font-medium leading-relaxed">
-               EVERYANGLE provides complete visibility into the physical store environment, turning raw video into decision-grade intelligence.
+               These are the layers we watch on every floor. Each one is calibrated, audited, and tied to a decision someone in your business already needs to make this week.
              </p>
           </div>
 
@@ -150,8 +168,8 @@ export default function Intelligence() {
       <section className="py-40 border-t border-white/5 bg-brand-navy">
         <div className="max-w-7xl mx-auto px-6">
            <div className="text-center mb-24">
-              <p className="text-brand-cyan text-[10px] font-black uppercase tracking-[0.4em] mb-8">Competitive Context</p>
-              <h2 className="font-display text-5xl md:text-7xl font-bold italic text-white">Why retailers <span className="text-brand-cyan">choose EVERYANGLE.</span></h2>
+              <p className="text-brand-cyan text-[10px] font-black uppercase tracking-[0.4em] mb-8">The honest comparison</p>
+              <h2 className="font-display text-5xl md:text-7xl font-bold italic text-white">What you get <br /><span className="text-brand-cyan">that they don't.</span></h2>
            </div>
 
            <div className="overflow-x-auto">
@@ -231,6 +249,9 @@ export default function Intelligence() {
         </div>
       </section>
 
+      {/* Resources */}
+      <ResourcesSection />
+
       {/* CTA section */}
       <section className="py-32 relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
@@ -241,5 +262,135 @@ export default function Intelligence() {
         </div>
       </section>
     </div>
+  );
+}
+
+/**
+ * ResourcesSection — scaffolded library of explainer briefs, whitepapers and webinars.
+ *
+ * To add a real resource: replace the matching object in the RESOURCES array below.
+ * - Set `status` to 'available' (was 'coming-soon')
+ * - Set `href` to the file path (e.g. /resources/queue-risk.pdf) or external URL
+ * - Update `summary` and `meta` if needed
+ *
+ * The card UI flips automatically based on status.
+ */
+type ResourceStatus = 'available' | 'coming-soon';
+type Resource = {
+  category: 'Brief' | 'Whitepaper' | 'Webinar';
+  title: string;
+  summary: string;
+  meta: string;
+  status: ResourceStatus;
+  href?: string;
+};
+
+const RESOURCES: Resource[] = [
+  {
+    category: 'Brief',
+    title: 'Queue Risk',
+    summary: 'How EVERYANGLE detects queue formation 90 seconds before customers walk — and the alert pattern that recovers up to 20% of abandoned baskets.',
+    meta: '6 min read · PDF',
+    status: 'coming-soon',
+  },
+  {
+    category: 'Brief',
+    title: 'Labor Sync',
+    summary: 'Aligning rosters to measured demand instead of historical schedules. The integration playbook for UKG, Quinyx and in-house WFM systems.',
+    meta: '8 min read · PDF',
+    status: 'coming-soon',
+  },
+  {
+    category: 'Brief',
+    title: 'Vision AI for retail',
+    summary: 'How skeletal-frame anonymization works, why it stays GDPR-safe, and where it differs from facial recognition. Aimed at IT and DPO teams.',
+    meta: '7 min read · PDF',
+    status: 'coming-soon',
+  },
+  {
+    category: 'Whitepaper',
+    title: 'The intelligence gap in physical retail',
+    summary: 'A field paper on why store managers still operate without the observability digital teams have had for fifteen years — and what closing the gap unlocks.',
+    meta: '24 pages · PDF',
+    status: 'coming-soon',
+  },
+  {
+    category: 'Whitepaper',
+    title: 'Cisco Meraki + EVERYANGLE deployment guide',
+    summary: 'Reference architecture for activating EVERYANGLE on existing Cisco Meraki MV cameras across an enterprise retail estate.',
+    meta: '18 pages · PDF',
+    status: 'coming-soon',
+  },
+  {
+    category: 'Webinar',
+    title: 'Pilot in 14 days: an operator playbook',
+    summary: 'A 30-minute walkthrough of how a typical EVERYANGLE pilot unfolds — set-up, data review, and rollout decision.',
+    meta: '30 min · On demand',
+    status: 'coming-soon',
+  },
+];
+
+function ResourcesSection() {
+  return (
+    <section id="resources" className="py-32 border-t border-white/5 bg-brand-navy">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="mb-16 max-w-3xl">
+          <p className="text-brand-primary text-[10px] font-black uppercase tracking-[0.4em] mb-8">Resources</p>
+          <h2 className="font-display text-5xl md:text-7xl font-bold italic text-white leading-[0.9]">
+            The library, <br />
+            <span className="text-brand-primary">in plain language.</span>
+          </h2>
+          <p className="text-lg text-slate-400 font-medium leading-relaxed mt-8">
+            Briefs, whitepapers and webinars from the EVERYANGLE field team. New material added regularly.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {RESOURCES.map((r, i) => {
+            const isReady = r.status === 'available';
+            const Wrapper: ElementType = isReady && r.href ? 'a' : 'div';
+            const wrapperProps = isReady && r.href ? { href: r.href, target: r.href.startsWith('http') ? '_blank' : undefined, rel: 'noopener noreferrer' } : {};
+            return (
+              <Wrapper
+                key={i}
+                {...wrapperProps}
+                className={`block p-8 bg-white/[0.02] border border-white/5 rounded-[32px] transition-all group ${
+                  isReady ? 'hover:bg-white/[0.05] hover:border-brand-primary/40 cursor-pointer' : 'opacity-70'
+                }`}
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <span className={`text-[9px] font-black uppercase tracking-[0.3em] px-3 py-1.5 rounded-full ${
+                    r.category === 'Brief' ? 'bg-brand-primary/10 text-brand-primary' :
+                    r.category === 'Whitepaper' ? 'bg-brand-secondary/10 text-brand-secondary' :
+                    'bg-brand-accent/10 text-brand-accent'
+                  }`}>
+                    {r.category}
+                  </span>
+                  {!isReady && (
+                    <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Coming soon</span>
+                  )}
+                </div>
+                <h3 className="font-display text-xl md:text-2xl font-bold italic text-white leading-tight mb-3">
+                  {r.title}
+                </h3>
+                <p className="text-sm text-slate-400 font-medium leading-relaxed mb-6">{r.summary}</p>
+                <div className="pt-4 border-t border-white/5 flex items-center justify-between">
+                  <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">{r.meta}</span>
+                  {isReady ? (
+                    <span className="text-[10px] font-bold text-brand-primary uppercase tracking-widest group-hover:translate-x-1 transition-transform">
+                      Read →
+                    </span>
+                  ) : (
+                    <Link to="/contact" className="text-[10px] font-bold text-slate-500 hover:text-white uppercase tracking-widest transition-colors">
+                      Notify me →
+                    </Link>
+                  )}
+                </div>
+              </Wrapper>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 }

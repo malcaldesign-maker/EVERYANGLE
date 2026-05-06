@@ -1,32 +1,38 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Play, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Play, ArrowRight } from 'lucide-react';
+import { useMeta } from '../hooks/useMeta';
 
 export default function CaseStudies() {
+  useMeta({
+    title: 'Case studies — EVERYANGLE',
+    description:
+      'How global retailers used EVERYANGLE to lift conversion 30%, recover queue dropouts, and align labor with measured demand. Real numbers, real rollouts.',
+  });
   const caseStudies = [
     {
       brand: "Global Luxury Beauty",
-      title: "Optimizing High-Value Conversions",
+      title: "Optimizing high-value conversions on the counter floor",
       metric: "+30% Conversion Lift",
       tag: "Operational Efficiency",
-      desc: "By aligning staff rosters to the 'peak zones' identified by Everyangle, the brand eliminated queue abandonment.",
-      image: "input_file_3.png"
+      desc: "By aligning staff rosters to the peak engagement zones identified by EVERYANGLE, the brand cut counter-side queue abandonment to single digits.",
+      image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=2070&auto=format&fit=crop"
     },
     {
       brand: "Apparel Retail Leader",
-      title: "Eliminating Queue Loss",
+      title: "Eliminating queue loss in flagship stores",
       metric: "-20% Queue Dropout",
       tag: "Queue Intelligence",
-      desc: "Real-time alerts to floor managers allowed for dynamic till opening, saving thousands in daily lost revenue.",
-      image: "input_file_4.png"
+      desc: "Real-time alerts to floor managers triggered dynamic till opening, recovering five-figure daily revenue per location.",
+      image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2071&auto=format&fit=crop"
     },
     {
       brand: "Global Coffee Leader",
-      title: "Rostering vs Footfall",
+      title: "Rostering against actual footfall, not historical guesses",
       metric: "15% Labor Efficiency",
       tag: "Store Operations",
-      desc: "Optimizing barista staffing based on real-time arrival patterns and queue friction points.",
-      image: "input_file_1.png"
+      desc: "Barista staffing now aligns with measured arrival patterns and live queue friction — without inflating overall headcount.",
+      image: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=2070&auto=format&fit=crop"
     }
   ];
 

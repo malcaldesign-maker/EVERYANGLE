@@ -1,14 +1,13 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Users, 
-  TrendingUp, 
-  BarChart3, 
-  Clock, 
-  Zap, 
-  Target, 
-  Eye,
+import {
+  ArrowRight,
+  Users,
+  TrendingUp,
+  BarChart3,
+  Clock,
+  Zap,
+  Target,
   CheckCircle2,
   ChevronRight,
   Brain,
@@ -17,10 +16,22 @@ import {
   Download,
   FileText
 } from 'lucide-react';
-import DashboardCard from '../components/DashboardCard';
-import VisionAIFeed from '../components/VisionAIFeed';
+import SignalGrid from '../components/SignalGrid';
+import LiveStoreMap from '../components/LiveStoreMap';
+import RoiCalculator from '../components/RoiCalculator';
+import InlineLeadCapture from '../components/InlineLeadCapture';
+import CustomerMarquee from '../components/CustomerMarquee';
+import RoleSwitcher from '../components/RoleSwitcher';
+import PilotProjector from '../components/PilotProjector';
+import { useMeta } from '../hooks/useMeta';
 
 export default function Home() {
+  useMeta({
+    title: 'EVERYANGLE — Agentic intelligence for physical retail',
+    description:
+      'EVERYANGLE turns existing camera infrastructure into a real-time intelligence layer for store performance — measuring footfall, conversion, queues, and labor across every site.',
+  });
+
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
@@ -30,43 +41,25 @@ export default function Home() {
 
   const features = [
     {
-      title: "Store Performance",
-      desc: "Integrate entrance and sale data to track conversion rates and staffing efficiency. Aggregate or site-specific views.",
+      title: "Store performance",
+      desc: "We measure conversion by site, hour, zone — then auto-flag the three stores dragging your fleet average this week.",
       icon: <TrendingUp className="text-brand-primary" size={24} />,
-      metric: "30%",
-      metricLabel: "Conversion Lift"
+      metric: "+30%",
+      metricLabel: "Avg conversion lift"
     },
     {
-      title: "Speed of Service",
-      desc: "Track wait times and queue durations. Optimize layouts to reduce friction and enhance dwell engagement.",
+      title: "Speed of service",
+      desc: "We see the queue forming 90 seconds before it does. The floor manager gets the alert. The till opens. The customer stays.",
       icon: <Clock className="text-brand-primary" size={24} />,
-      metric: "20%",
-      metricLabel: "Fewer Walkouts"
+      metric: "-20%",
+      metricLabel: "Walkout rate"
     },
     {
-      title: "Marketing Impact",
-      desc: "Connect promotion dwell time with sales. Finally measure the true ROI of your in-store campaigns.",
+      title: "Marketing impact",
+      desc: "Window dwell, endcap engagement, promo conversion — all measured. Underperforming activations flagged automatically.",
       icon: <Target className="text-brand-primary" size={24} />,
-      metric: "High",
-      metricLabel: "Campaign ROI"
-    }
-  ];
-
-  const valueProps = [
-    {
-      title: "Unrivalled Footfall Intelligence",
-      content: "Computer vision tracks people entering, offering deep insights into traffic patterns to optimize staffing.",
-      bg: "bg-brand-card/50"
-    },
-    {
-      title: "Staff & Minor Identification",
-      content: "Our Vision AI distinguishes staff and minors, allowing you to analyze true customer count vs total footfall.",
-      bg: "bg-brand-primary/5"
-    },
-    {
-      title: "Staffing & Rostering Efficiency",
-      content: "Save money with efficient staffing. Identify peak hours and roster to achieve target wait-times.",
-      bg: "bg-brand-card/50"
+      metric: "26x",
+      metricLabel: "Documented ROI"
     }
   ];
 
@@ -85,76 +78,75 @@ export default function Home() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-brand-secondary text-[10px] font-bold uppercase tracking-[0.3em] mb-10 shadow-[0_0_15px_rgba(168,85,247,0.2)]">
               <Brain size={12} className="text-brand-secondary" />
-              EVERYANGLE — AGENTIC INTELLIGENCE FOR PHYSICAL RETAIL
+              Vision AI · Agentic AI · For Physical Retail
             </div>
-            
+
             <h1 className="font-display text-6xl md:text-9xl font-bold leading-[0.9] mb-10 tracking-tight text-white">
-              Every Visit. <br />
-              <span className="text-brand-primary italic">Every Insight.</span>
+              Footfall counting <br />
+              <span className="text-brand-primary italic">is broken.</span>
             </h1>
-            
-            <p className="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto mb-16 leading-relaxed font-medium">
-              AI-powered journey analytics that reveals <span className="text-violet-400">how shoppers move, engage, and convert </span> in your store.
+
+            <p className="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed font-medium">
+              We don't count who walks in. <span className="text-white">We see how they shop, what makes them buy, and we act on it</span> — on the cameras you already own.
+            </p>
+            <p className="text-base md:text-lg text-slate-500 max-w-2xl mx-auto mb-16 leading-relaxed font-medium italic">
+              The intelligence bridge between online and physical retail.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6">
-              <Link to="/contact" className="bg-brand-primary text-white font-display text-lg font-bold px-12 py-5 rounded-2xl hover:bg-white hover:text-brand-navy transition-all duration-500 shadow-2xl shadow-brand-primary/40">
-                Book a Demo
+              <Link to="/contact" className="bg-brand-primary text-white font-display text-lg font-bold px-12 py-5 rounded-2xl hover:bg-white hover:text-brand-navy transition-all duration-500 shadow-2xl shadow-brand-primary/40 inline-flex items-center gap-3 group">
+                Book a 30-min demo
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link to="/product" className="border border-white/10 text-white hover:bg-white/5 font-display text-lg font-bold px-12 py-5 rounded-2xl transition-all duration-500 backdrop-blur-sm">
-                The Platform Tour
-              </Link>
+              <a href="#live-store" className="border border-white/10 text-white hover:bg-white/5 font-display text-lg font-bold px-12 py-5 rounded-2xl transition-all duration-500 backdrop-blur-sm inline-flex items-center gap-3">
+                See it live
+              </a>
+            </div>
+
+            <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-3 text-[11px] font-bold text-slate-500 uppercase tracking-[0.25em]">
+              <span className="flex items-center gap-2"><CheckCircle2 size={12} className="text-brand-accent" /> 14-day pilot setup</span>
+              <span className="flex items-center gap-2"><CheckCircle2 size={12} className="text-brand-accent" /> Works on existing CCTV</span>
+              <span className="flex items-center gap-2"><CheckCircle2 size={12} className="text-brand-accent" /> GDPR-safe by design</span>
             </div>
           </motion.div>
         </div>
 
-        {/* Cinematic Visual - Taking more space below text */}
-        <motion.div 
+        {/* Signature interaction — animated live store map */}
+        <motion.div
+          id="live-store"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.3 }}
-          className="relative w-full max-w-6xl mx-auto px-6 pb-20"
+          className="relative w-full max-w-6xl mx-auto px-6 pb-20 scroll-mt-32"
         >
-          <VisionAIFeed />
+          <LiveStoreMap />
         </motion.div>
       </section>
 
-      {/* Logo Strip */}
-      <section className="bg-brand-card/30 py-20 border-y border-white/5 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-6">
-           <p className="text-center text-[10px] font-black text-slate-500 uppercase tracking-[0.5em] mb-12">Trusted by Global Retail Leaders</p>
-           <motion.div 
-             initial={{ opacity: 0 }}
-             whileInView={{ opacity: 1 }}
-             className="flex flex-wrap justify-center items-center gap-x-16 gap-y-12 opacity-40 grayscale group hover:grayscale-0 transition-all duration-700"
-           >
-              {["Samsøe Samsøe", "Sleep Number", "Starbucks", "Ulta Beauty", "Foot Locker", "H&M"].map((brand) => (
-                <span key={brand} className="text-xl md:text-2xl font-display font-black text-white italic tracking-tighter opacity-60 hover:opacity-100 transition-opacity whitespace-nowrap">
-                  {brand}
-                </span>
-              ))}
-           </motion.div>
-        </div>
-      </section>
+      <CustomerMarquee />
 
       {/* Featured Video Case Study */}
       <section className="py-32 bg-brand-navy border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-5 gap-20 items-center">
             <div className="lg:col-span-2">
-              <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 italic">Vision Intelligence <br /> <span className="text-brand-accent">in Action.</span></h2>
+              <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 italic">Nobody needs more dashboards. <br /> <span className="text-brand-accent">Retailers need decisions.</span></h2>
               <p className="text-lg text-slate-400 mb-8 leading-relaxed font-medium">
-                See how Everyangle transforms the physical store into a data-rich environment, providing insights that were previously only available to e-commerce.
+                Watch a global retailer turn raw camera feeds into the same level of behavioural insight their e-commerce team has had for a decade — without buying a single new sensor.
               </p>
-              <div className="flex items-center gap-4 p-6 bg-white/[0.02] border border-white/5 rounded-2xl">
-                 <div className="w-10 h-10 bg-brand-accent/20 rounded-full flex items-center justify-center text-brand-accent">
-                    <CheckCircle2 size={20} />
-                 </div>
-                 <div>
-                    <p className="text-sm font-bold text-white uppercase tracking-wider">Case Study Featured</p>
-                    <p className="text-xs text-slate-500">Retail Operational Excellence</p>
-                 </div>
-              </div>
+              <Link
+                to="/case-studies/samsoe"
+                className="flex items-center gap-4 p-6 bg-white/[0.02] border border-white/5 rounded-2xl hover:bg-white/[0.04] hover:border-brand-accent/30 transition-all group"
+              >
+                <div className="w-10 h-10 bg-brand-accent/20 rounded-full flex items-center justify-center text-brand-accent flex-shrink-0">
+                  <CheckCircle2 size={20} />
+                </div>
+                <div className="flex-grow">
+                  <p className="text-sm font-bold text-white uppercase tracking-wider">Case Study · Samsøe Samsøe</p>
+                  <p className="text-xs text-slate-500">+11% menswear · 26× ROI · 2.9% sales lift</p>
+                </div>
+                <ArrowRight size={16} className="text-brand-accent group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
             <div className="lg:col-span-3">
               <div className="relative aspect-video rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
@@ -180,13 +172,13 @@ export default function Home() {
             <div id="section-understand">
               <div className="grid lg:grid-cols-2 gap-20 items-center mb-20">
                 <motion.div {...fadeInUp}>
-                  <p className="text-brand-accent text-[10px] font-black uppercase tracking-[0.4em] mb-8">Measure What Matters</p>
+                  <p className="text-brand-accent text-[10px] font-black uppercase tracking-[0.4em] mb-8">Vision AI · The perception layer</p>
                   <h2 className="font-display text-5xl md:text-7xl font-bold mb-10 italic text-white flex flex-col gap-2">
-                    Vision Intelligence for 
-                    <span className="text-brand-accent">the physical world.</span>
+                    The store has been
+                    <span className="text-brand-accent">talking the whole time.</span>
                   </h2>
                   <div className="space-y-6 text-slate-400 leading-relaxed font-medium">
-                    <p>Understand the customer journey with absolute clarity. From street-to-store conversion to in-aisle engagement, EVERYANGLE provides the deep visibility required to run a modern retail business.</p>
+                    <p>You've been listening to a turnstile count. We listen to the whole floor — every aisle, every fitting room, every queue — in real time, on the cameras you already own. <span className="text-white">That's the Vision half.</span></p>
                   </div>
                 </motion.div>
                 <div className="space-y-4">
@@ -202,12 +194,12 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <VisionAIFeed />
+                <SignalGrid />
               </motion.div>
             </div>
 
@@ -318,9 +310,9 @@ export default function Home() {
                  </div>
               </div>
               <motion.div {...fadeInUp} className="order-1 lg:order-2">
-                 <p className="text-brand-primary text-[10px] font-black uppercase tracking-[0.4em] mb-8">Integrated Operations</p>
-                 <h2 className="font-display text-5xl md:text-7xl font-bold mb-10 italic">Intelligence that <br /> <span className="text-brand-primary">Syncs your team.</span></h2>
-                 <p className="text-lg text-slate-400 mb-10 leading-relaxed font-medium">Aligning labor spending with actual customer demand. EVERYANGLE integrates directly with your rostering systems to ensure your team is always in the right place at the right time.</p>
+                 <p className="text-brand-primary text-[10px] font-black uppercase tracking-[0.4em] mb-8">Agentic AI · The action layer</p>
+                 <h2 className="font-display text-5xl md:text-7xl font-bold mb-10 italic">Seeing isn't enough. <br /> <span className="text-brand-primary">We act on it.</span></h2>
+                 <p className="text-lg text-slate-400 mb-10 leading-relaxed font-medium">Vision tells you the queue is forming. Agentic tells the floor manager to open till 4 — before the customer leaves. Rosters get adjusted overnight. Cold zones get flagged before the buyer's review on Monday. <span className="text-white">Decisions get taken, not just dashboards refreshed.</span></p>
                  <Link to="/product" className="inline-flex items-center gap-4 text-xs font-bold text-white uppercase tracking-[0.3em] group">
                     Dynamic Scheduling <ArrowRight size={16} className="text-brand-primary group-hover:translate-x-2 transition-transform" />
                  </Link>
@@ -330,8 +322,8 @@ export default function Home() {
             {/* Row 3: Economics of Infrastructure (Technical Bento) */}
             <div className="grid lg:grid-cols-2 gap-24 items-center">
                <motion.div {...fadeInUp}>
-                  <p className="text-brand-primary text-[10px] font-black uppercase tracking-[0.4em] mb-12">System Efficiency</p>
-                  <h2 className="font-display text-5xl md:text-7xl font-bold mb-16 italic text-white leading-[0.85]">Value without <br /> <span className="text-brand-primary">new hardware.</span></h2>
+                  <p className="text-brand-primary text-[10px] font-black uppercase tracking-[0.4em] mb-12">Already on your wall</p>
+                  <h2 className="font-display text-5xl md:text-7xl font-bold mb-16 italic text-white leading-[0.85]">The smartest sensor <br /> <span className="text-brand-primary">you already own.</span></h2>
                   
                   <div className="space-y-10">
                      {[
@@ -408,6 +400,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AI-flavored pilot projector — type your brand, see the upside */}
+      <PilotProjector />
+
+      {/* Per-role use case toggle */}
+      <RoleSwitcher />
+
+      {/* Interactive ROI Calculator — high-converting lead capture */}
+      <RoiCalculator />
+
+      {/* Inline lead capture — low-commitment alternative to "book a demo" */}
+      <InlineLeadCapture />
+
       {/* Founder Message Section */}
       <section className="py-40 bg-brand-card/10 border-y border-white/5 relative overflow-hidden">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent" />
@@ -416,9 +420,9 @@ export default function Home() {
               <MessageSquare size={40} className="text-brand-primary/40 mx-auto mb-12" />
               <h2 className="font-display text-4xl md:text-6xl font-bold mb-12 italic text-white">A note from <span className="text-brand-primary">our founder.</span></h2>
               <div className="space-y-8 text-xl md:text-2xl text-slate-300 italic font-medium leading-relaxed mb-16">
-                 <p>"EVERYANGLE was created from a belief that physical retail has been underserved by technology for too long."</p>
-                 <p>"Online teams can see almost everything. Store teams, despite managing some of the most important customer moments, have often had to rely on fragmented reports or binary footfall counts."</p>
-                 <p>"We built EVERYANGLE to close that gap — moving from store blindness to store signal."</p>
+                 <p>"An e-commerce manager can see, in real time, exactly where a customer hesitated and why they didn't check out."</p>
+                 <p>"A store manager standing on the same floor that produced 90% of the revenue has, until very recently, had a turnstile count and a Friday spreadsheet."</p>
+                 <p>"That gap is what EVERYANGLE was built to close."</p>
               </div>
               
               <div className="pt-10 border-t border-white/10 inline-block text-center">
@@ -435,10 +439,10 @@ export default function Home() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
            <div className="mb-24 text-center lg:text-left">
-              <p className="text-brand-accent text-[10px] font-black uppercase tracking-[0.4em] mb-8">What this Unlocks</p>
-              <h2 className="font-display text-5xl md:text-7xl font-bold mb-10 italic text-white leading-[0.9]">Operational <br /> <span className="text-brand-primary">Intelligence.</span></h2>
+              <p className="text-brand-accent text-[10px] font-black uppercase tracking-[0.4em] mb-8">Decisions, not dashboards</p>
+              <h2 className="font-display text-5xl md:text-7xl font-bold mb-10 italic text-white leading-[0.9]">Trusted data, <br /> <span className="text-brand-primary">acted on.</span></h2>
               <p className="text-xl text-slate-400 max-w-2xl font-medium leading-relaxed mx-auto lg:ml-0 lg:mr-auto">
-                 Accurate, trusted data transforms how store teams operate — moving from reactive fire-fighting to proactive, decision-grade execution.
+                 Once the floor data is clean enough to stake a decision on, the whole rhythm changes. Mornings stop being reactive. Conversion, queues, and CSAT start moving in the same direction.
               </p>
            </div>
 
@@ -543,13 +547,18 @@ export default function Home() {
       <section className="py-32 relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="bg-brand-navy border border-brand-primary/20 p-12 md:p-20 rounded-[40px] text-center shadow-2xl glow-primary">
-            <h2 className="font-display text-4xl md:text-6xl font-bold mb-10 max-w-3xl mx-auto">
-              Ready to transform your <span className="text-brand-accent">retail floor?</span>
+            <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 max-w-3xl mx-auto leading-tight">
+              Online retail has had this for a decade. <br />
+              <span className="text-brand-accent italic">Now your stores do too.</span>
             </h2>
+            <p className="text-lg text-slate-400 max-w-xl mx-auto mb-10 font-medium">Vision AI to see the floor. Agentic AI to fix it. 30 minutes to see the platform. 14 days to a working pilot. No new hardware. No theatre.</p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link to="/contact" className="bg-brand-primary text-white font-display text-xl font-bold px-12 py-6 rounded-2xl hover:bg-white hover:text-brand-navy hover:scale-105 transition-all duration-300">
-                Book a Demo Today
+                Book a 30-min demo
               </Link>
+              <a href="#roi" className="border border-white/10 text-white hover:bg-white/5 font-display text-xl font-bold px-12 py-6 rounded-2xl transition-colors">
+                Run the ROI numbers
+              </a>
             </div>
           </div>
         </div>

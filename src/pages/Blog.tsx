@@ -1,8 +1,13 @@
 import { motion } from 'motion/react';
 import { Calendar, User, ArrowRight, BookOpen } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useMeta } from '../hooks/useMeta';
 
 export default function Blog() {
+  useMeta({
+    title: 'Field Notes — EVERYANGLE',
+    description:
+      'Essays and field reports on Vision AI in physical retail: agentic systems, privacy by design, and the path from arrival to conversion.',
+  });
   const posts = [
     {
       id: 1,

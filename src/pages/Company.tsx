@@ -1,21 +1,23 @@
 import { motion } from 'motion/react';
-import { 
-  Target, 
-  Users, 
-  Zap, 
-  ShieldCheck, 
-  CheckCircle2, 
-  TrendingUp, 
-  Eye, 
-  Cpu, 
+import {
+  Target,
+  Zap,
+  CheckCircle2,
+  TrendingUp,
+  Eye,
   MessageSquare,
   ArrowRight,
   Handshake,
-  Lightbulb
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useMeta } from '../hooks/useMeta';
 
 export default function Company() {
+  useMeta({
+    title: 'Company — EVERYANGLE',
+    description:
+      'EVERYANGLE is a Vision AI company headquartered in Dublin, helping retailers make their physical stores measurable, observable, and improvable.',
+  });
   const heroChips = [
     "Retail Vision AI",
     "Store Intelligence",
@@ -58,24 +60,26 @@ export default function Company() {
     }
   ];
 
+  // NOTE: replace these placeholder Unsplash URLs with real headshots
+  // hosted in /public/team/ (e.g. /team/david.jpg) before publishing.
   const team = [
-    { 
-      name: "David Owens", 
-      role: "Founder & CEO", 
-      image: "/input_file_0.png",
-      bio: "David leads the overall vision, strategy, and commercial direction of EVERYANGLE. With a background in scaling high-growth technology companies, he created the platform from a belief that the physical store has been underserved by technology for too long, focusing on closing the 'instrumentation gap' between digital and physical retail." 
+    {
+      name: "David Owens",
+      role: "Founder & CEO",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop",
+      bio: "David leads the overall vision, strategy, and commercial direction of EVERYANGLE. With a background in scaling high-growth technology companies, he created the platform from a belief that the physical store has been underserved by technology for too long, focusing on closing the 'instrumentation gap' between digital and physical retail."
     },
-    { 
-      name: "Brian Martin", 
-      role: "VP Product", 
-      image: "/input_file_1.png",
-      bio: "Brian leads product strategy and technical direction at EVERYANGLE. He is responsible for translating the complex needs of enterprise retailers into a scalable Vision AI platform, ensuring that every insight generated — from traffic to conversion — is 'decision-grade' and actionable for store operations teams." 
+    {
+      name: "Brian Martin",
+      role: "VP Product",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
+      bio: "Brian leads product strategy and technical direction at EVERYANGLE. He is responsible for translating the complex needs of enterprise retailers into a scalable Vision AI platform, ensuring that every insight generated — from traffic to conversion — is decision-grade and actionable for store operations teams."
     },
-    { 
-      name: "Malachy Callan", 
-      role: "Commercial Strategy & Growth", 
-      image: "/input_file_2.png",
-      bio: "Malachy leads EVERYANGLE’s commercial expansion and strategic partnerships. He works closely with global retailers and technology partners like Cisco and Meraki to help them unlock the hidden value in their existing camera infrastructure, driving measurable ROI across their entire store estate." 
+    {
+      name: "Malachy Callan",
+      role: "Commercial Strategy & Growth",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1973&auto=format&fit=crop",
+      bio: "Malachy leads EVERYANGLE's commercial expansion and strategic partnerships. He works closely with global retailers and technology partners like Cisco and Meraki to help them unlock the hidden value in their existing camera infrastructure, driving measurable ROI across their entire store estate."
     }
   ];
 
@@ -92,13 +96,13 @@ export default function Company() {
           >
             <p className="text-brand-cyan text-[10px] font-black uppercase tracking-[0.4em] mb-10">Company & Team</p>
             <h1 className="font-display text-6xl md:text-8xl font-bold mb-10 tracking-tight leading-[0.95] italic">
-              Built to see every angle of the <span className="text-brand-cyan">physical store.</span>
+              The store has been talking. <span className="text-brand-cyan">We're the people listening.</span>
             </h1>
             <p className="text-xl md:text-2xl text-white leading-relaxed font-medium mb-10 max-w-3xl">
-              EVERYANGLE helps retailers understand what is really happening inside their stores. By turning existing camera infrastructure into real-time operational intelligence.
+              EVERYANGLE is the operating system for physical retail. We turn cameras retailers already own into a real-time signal layer — the same level of observability e-commerce teams have had for a decade.
             </p>
             <p className="text-lg text-slate-400 max-w-2xl leading-relaxed mb-16">
-              We believe the future of retail belongs to teams who can see clearly, act quickly, and improve continuously — not through guesswork, but through trusted intelligence from the shop floor.
+              The future of retail belongs to teams who can see what's actually happening on the floor and act on it before the day ends. We're building the tools that make that the default.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -118,13 +122,13 @@ export default function Company() {
           <div className="grid lg:grid-cols-2 gap-24 items-center">
              <div>
                 <p className="text-brand-cyan text-[10px] font-black uppercase tracking-[0.4em] mb-8">Our Vision</p>
-                <h2 className="font-display text-4xl md:text-6xl font-bold mb-10 italic">Bringing ecommerce-level visibility to <span className="text-white">physical retail.</span></h2>
+                <h2 className="font-display text-4xl md:text-6xl font-bold mb-10 italic">Online teams see everything. <span className="text-white">Store teams deserve the same.</span></h2>
              </div>
              <div className="space-y-6 text-lg text-slate-400 leading-relaxed font-medium">
-                <p>Physical stores are full of signals: who enters, where they go, how long they stay, where queues form, which zones attract attention, and where opportunities are missed.</p>
-                <p>For too long, many of these signals have been invisible, fragmented, or trapped in manual reporting. <span className="text-white">EVERYANGLE exists to change that.</span></p>
-                <p>We help retailers turn their existing infrastructure into a live intelligence layer for store performance. From entrance analytics and queue visibility to dwell, engagement, conversion, and operational execution.</p>
-                <p>Our vision is simple: to make every store measurable, every team more informed, and every decision sharper.</p>
+                <p>An e-commerce manager knows, by the hour, which page killed the conversion. The store manager standing on the floor that produced 90% of the revenue has been working from a turnstile count and a Friday spreadsheet.</p>
+                <p><span className="text-white">That asymmetry is what EVERYANGLE was built to end.</span></p>
+                <p>We turn the cameras already mounted in every store into a continuous signal layer — measuring footfall, conversion, queues, dwell, demographic split, and labor utilisation, in real time, across every site you operate.</p>
+                <p>Our vision is simple. Make every store measurable. Make every team better-informed. Make every decision sharper.</p>
              </div>
           </div>
         </div>
@@ -198,11 +202,11 @@ export default function Company() {
               </div>
               <div className="order-1 lg:order-2">
                  <p className="text-brand-cyan text-[10px] font-black uppercase tracking-[0.4em] mb-8">About EVERYANGLE</p>
-                 <h2 className="font-display text-4xl md:text-6xl font-bold mb-10 italic">Retail intelligence for the <span className="text-brand-cyan">physical world.</span></h2>
+                 <h2 className="font-display text-4xl md:text-6xl font-bold mb-10 italic">A signal layer for <span className="text-brand-cyan">every store you run.</span></h2>
                  <div className="space-y-6 text-slate-400 leading-relaxed font-medium">
-                    <p>EVERYANGLE is a Vision AI company helping retailers understand and improve the performance of their physical stores.</p>
-                    <p>Our platform turns existing camera infrastructure into a real-time intelligence layer, giving teams visibility into customer journeys, footfall, queues, and operational execution.</p>
-                    <p>The physical store deserves the same level of intelligence, measurement, and optimisation that digital commerce has had for years.</p>
+                    <p>EVERYANGLE is a Vision AI company. We turn cameras retailers already own into a continuous, decision-grade signal layer for store performance.</p>
+                    <p>Customer journeys, footfall, queues, conversion, dwell, demographic split, labor utilisation — measured live, on every site, no new sensors.</p>
+                    <p>The physical store deserves the same observability digital commerce has had for fifteen years. We're closing the gap.</p>
                  </div>
               </div>
            </div>
@@ -216,9 +220,9 @@ export default function Company() {
             <MessageSquare size={40} className="text-brand-cyan/40 mx-auto mb-12" />
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-12 italic">A note from <span className="text-brand-cyan">our founder.</span></h2>
             <div className="space-y-8 text-xl text-slate-300 italic font-medium leading-relaxed mb-16">
-               <p>"EVERYANGLE was created from a belief that physical retail has been underserved by technology for too long."</p>
-               <p>"Online teams can see almost everything. Store teams, despite managing some of the most important customer moments, have often had to rely on fragmented reports or binary footfall counts."</p>
-               <p>"We built EVERYANGLE to close that gap — moving from store blindness to store signal."</p>
+               <p>"An e-commerce manager can see, in real time, exactly where a customer hesitated and why they didn't check out."</p>
+               <p>"A store manager standing on the same floor that produced 90% of the revenue has, until very recently, had a turnstile count and a Friday spreadsheet."</p>
+               <p>"That gap is what EVERYANGLE was built to close."</p>
             </div>
             
             <div className="pt-10 border-t border-white/10 inline-block text-center">
@@ -232,11 +236,11 @@ export default function Company() {
       <section className="py-40 bg-brand-navy relative overflow-hidden text-center">
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <h2 className="font-display text-5xl md:text-8xl font-bold mb-12 tracking-tight italic leading-[0.9]">
-            Ready to see what your stores <br />
-            <span className="text-brand-cyan">are really telling you?</span>
+            Your stores have <br />
+            <span className="text-brand-cyan">always been talking.</span>
           </h2>
           <p className="text-xl text-slate-400 mb-16 max-w-2xl mx-auto leading-relaxed">
-            Partner with EVERYANGLE to turn your existing camera infrastructure into real-time retail intelligence across footfall, queues, and engagement.
+            Thirty minutes to see the platform. Fourteen days to set up a pilot. No new hardware. No three-quarter procurement cycle. Just the signal.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link to="/contact" className="w-full sm:w-auto bg-brand-cyan text-brand-navy font-display text-lg font-bold px-12 py-6 rounded-2xl hover:bg-white transition-all duration-500 flex items-center justify-center gap-3">

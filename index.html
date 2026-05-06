@@ -3,11 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+
+    <title>EVERYANGLE — Agentic intelligence for physical retail</title>
+    <meta name="description" content="EVERYANGLE turns existing camera infrastructure into a real-time intelligence layer for store performance — measuring footfall, conversion, queues, and labor across every site." />
+    <meta name="theme-color" content="#020617" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="EVERYANGLE — Agentic intelligence for physical retail" />
+    <meta property="og:description" content="Turning existing camera infrastructure into a real-time intelligence layer for store performance." />
+    <meta property="og:site_name" content="EVERYANGLE" />
+    <meta property="og:image" content="/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="EVERYANGLE — Agentic intelligence for physical retail" />
+    <meta name="twitter:description" content="Turning existing camera infrastructure into a real-time intelligence layer for store performance." />
+    <meta name="twitter:image" content="/og-image.svg" />
+
+    <!-- AI search hints -->
+    <meta name="application-name" content="EVERYANGLE" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+
+    <!-- Preconnect to Google Fonts for faster first paint -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Structured data: Organization + WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://everyangle.ai/#organization",
+            "name": "EVERYANGLE",
+            "url": "https://everyangle.ai",
+            "logo": "https://everyangle.ai/og-image.svg",
+            "sameAs": ["https://www.linkedin.com/company/everyangle"],
+            "description": "EVERYANGLE turns existing camera infrastructure into a real-time intelligence layer for store performance.",
+            "foundingLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Dublin",
+                "addressCountry": "IE"
+              }
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@everyangle.ai",
+              "contactType": "Sales",
+              "areaServed": ["EU", "UK", "US"]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://everyangle.ai/#website",
+            "url": "https://everyangle.ai",
+            "name": "EVERYANGLE",
+            "publisher": { "@id": "https://everyangle.ai/#organization" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://everyangle.ai/#product",
+            "name": "EVERYANGLE Vision Platform",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Cloud",
+            "publisher": { "@id": "https://everyangle.ai/#organization" },
+            "description": "Computer-vision platform that converts existing CCTV footage into real-time retail analytics: footfall, conversion, queue pressure, dwell, and labor optimisation.",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "USD",
+              "category": "subscription",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://everyangle.ai/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need to install new cameras?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. EVERYANGLE runs on the cameras you already have, including standard IP/CCTV systems and Cisco / Meraki estates. Most deployments require zero new hardware."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this GDPR compliant?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We use anonymized skeletal-frame tracking — there is no facial recognition and no personally identifiable information stored. The platform is designed to be GDPR-safe by default."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does a pilot take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A typical pilot is set up within 14 days and runs for 4 weeks across one to five sites. You see live data on day one of activation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does it integrate with?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "POS systems, BI tools (Looker, Power BI, Tableau), workforce management (UKG, Quinyx), and notification systems like Slack or Microsoft Teams."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
