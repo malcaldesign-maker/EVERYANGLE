@@ -6,7 +6,7 @@ export default function Product() {
   useMeta({
     title: 'Platform — EVERYANGLE',
     description:
-      'A single enterprise platform that turns existing global camera footprints into decision-grade retail intelligence: traffic, conversion, queues, and zone insight.',
+      'A single enterprise platform that turns existing global camera footprints into the layer that sees, decides and acts: traffic, conversion, queues, and zone insight.',
   });
   const modules = [
     {
@@ -60,7 +60,7 @@ export default function Product() {
                  </div>
                  <div className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-2xl group hover:border-brand-primary transition-colors">
                     <Zap size={18} className="text-brand-primary" />
-                    <span className="text-xs font-bold uppercase tracking-widest text-white/80">Decision-Grade</span>
+                    <span className="text-xs font-bold uppercase tracking-widest text-white/80">Calibrated</span>
                  </div>
               </div>
             </motion.div>
@@ -136,7 +136,7 @@ export default function Product() {
                  <div className="space-y-8">
                     {[
                        { title: "Existing Infrastructure First", desc: "EVERYANGLE integrates with the cameras you already have installed. No new hardware required in most deployments." },
-                       { title: "Decision-Grade Data Quality", desc: "Calibrated accuracy across lighting conditions, store layouts, and traffic volumes — numbers your team can trust and act on." },
+                       { title: "Calibrated by retail, for retail", desc: "Accuracy holds across lighting, store layouts and traffic volumes — numbers your team can stake a decision on." },
                        { title: "Agentic AI Recommendation", desc: "Autonomous reasoning that translates visual signals into natural language instructions for floor staff and managers." },
                        { title: "Privacy-First by Design", desc: "All processing happens securely. No facial recognition. GDPR-compliant out of the box." }
                     ].map((item, i) => (

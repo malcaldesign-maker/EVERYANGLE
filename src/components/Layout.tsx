@@ -211,7 +211,7 @@ export default function Layout({ children }: LayoutProps) {
                 <span className="font-display text-2xl font-bold tracking-tight text-white">EVERYANGLE</span>
               </Link>
               <p className="text-lg text-slate-400 font-medium mb-12 max-w-sm">
-                Turning existing camera infrastructure into a real-time intelligence layer for store performance.
+                The operating system for physical retail. Built on the cameras you already own.
               </p>
 
               <div className="space-y-4">

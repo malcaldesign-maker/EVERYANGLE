@@ -185,7 +185,7 @@ export default function PlatformSummary() {
             {[
               { icon: <ShieldCheck size={18} />, t: 'Privacy-first architecture', b: 'Anonymized skeletal-frame tracking. Edge-processed. No facial recognition. Documented for your DPO.' },
               { icon: <Zap size={18} />, t: 'Fast, low-risk deployment', b: 'No new hardware in most rollouts. No firmware. No cabling. Operational from day one.' },
-              { icon: <CheckCircle2 size={18} />, t: 'Decision-grade data quality', b: 'Calibrated 95–98% accuracy across lighting, store layouts and high-traffic periods. Audit-ready.' },
+              { icon: <CheckCircle2 size={18} />, t: 'Numbers your team can stake a decision on', b: 'Calibrated 95–98% accuracy across lighting, store layouts and high-traffic periods. Audit-ready.' },
             ].map((m, i) => (
               <div
                 key={i}
@@ -237,7 +237,7 @@ export default function PlatformSummary() {
         <section className="mb-12 print:mb-8 grid md:grid-cols-3 gap-3 md:gap-4">
           <div className="md:col-span-1">
             <h2 className="font-display text-xl md:text-2xl font-bold italic text-white print:text-black mb-2">What a pilot looks like</h2>
-            <p className="text-sm text-slate-500 print:text-black/60">Four weeks. Real data. Decision-grade outcome.</p>
+            <p className="text-sm text-slate-500 print:text-black/60">Four weeks. Real data. A number that survives a board meeting.</p>
           </div>
           <div className="md:col-span-2 border border-white/10 print:border-black/15 rounded-2xl p-5 md:p-6 bg-white/[0.02] print:bg-transparent">
             <ul className="space-y-3">

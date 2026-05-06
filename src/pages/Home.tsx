@@ -29,7 +29,7 @@ export default function Home() {
   useMeta({
     title: 'EVERYANGLE — Agentic intelligence for physical retail',
     description:
-      'EVERYANGLE turns existing camera infrastructure into a real-time intelligence layer for store performance — measuring footfall, conversion, queues, and labor across every site.',
+      'EVERYANGLE is the operating system for physical retail. We turn the cameras you already own into a live signal layer that sees, decides, and acts — measuring footfall, conversion, queues and labor across every site.',
   });
 
   const fadeInUp = {
@@ -448,12 +448,12 @@ export default function Home() {
 
            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                 { title: "Trusted Conversion", desc: "Accurate traffic enables real sales conversion measurement. No more guessing footfall.", icon: <TrendingUp size={24} />, meta: "Sales Performance" },
-                 { title: "Staffing Optimisation", desc: "Align your roster to actual customer demand peaks, not just historical schedules.", icon: <Users size={24} />, meta: "Labor Sync" },
-                 { title: "Queue Visibility", desc: "Identify and act on service bottlenecks in real time before they impact CSAT.", icon: <Clock size={24} />, meta: "Friction Control" },
-                 { title: "Store Benchmarking", desc: "Compare objective data across brands, formats, and regions with one version of truth.", icon: <Target size={24} />, meta: "Fleet Strategy" },
-                 { title: "Operational Alerts", desc: "Detect anomalies, traffic surges, and missed opportunities as they happen.", icon: <Zap size={24} />, meta: "Real-Time Action" },
-                 { title: "Privacy Protocol", desc: "Decision-grade insights delivered with absolute GDPR and privacy compliance.", icon: <Shield size={24} />, meta: "Data Integrity" }
+                 { title: "Real conversion, not estimates", desc: "Footfall × POS = the actual conversion rate by site, hour and zone. The headquarters guess gets retired.", icon: <TrendingUp size={24} />, meta: "Sales Performance" },
+                 { title: "Schedule for now, not last August", desc: "Rosters align to measured demand. Mornings stop being overstaffed. Saturday afternoons stop bleeding baskets.", icon: <Users size={24} />, meta: "Labor Sync" },
+                 { title: "Catch queues before customers do", desc: "We see the queue forming 90 seconds before anyone walks. The till opens. The basket stays.", icon: <Clock size={24} />, meta: "Friction Control" },
+                 { title: "One truth, every site", desc: "Flagships, neighbourhoods and outlets compared on the same axis. End the argument over whose number is right.", icon: <Target size={24} />, meta: "Fleet Strategy" },
+                 { title: "Anomaly intelligence, not noise", desc: "We flag the three stores that need a phone call this week — not 47 dashboards to read first.", icon: <Zap size={24} />, meta: "Real-Time Action" },
+                 { title: "Audit-ready by default", desc: "Skeletal-frame anonymization. No facial recognition. GDPR-safe by design — documented for your DPO.", icon: <Shield size={24} />, meta: "Data Integrity" }
               ].map((unlock, i) => (
                  <motion.div 
                    key={i}

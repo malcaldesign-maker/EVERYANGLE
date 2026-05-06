@@ -73,7 +73,7 @@ export default function Company() {
       name: "Brian Martin",
       role: "VP Product",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
-      bio: "Brian leads product strategy and technical direction at EVERYANGLE. He is responsible for translating the complex needs of enterprise retailers into a scalable Vision AI platform, ensuring that every insight generated — from traffic to conversion — is decision-grade and actionable for store operations teams."
+      bio: "Brian leads product strategy and technical direction at EVERYANGLE. He is responsible for translating the complex needs of enterprise retailers into a scalable Vision AI platform, ensuring every insight — from traffic to conversion — is calibrated, audit-ready, and built to drive operational decisions on the floor."
     },
     {
       name: "Malachy Callan",
@@ -204,7 +204,7 @@ export default function Company() {
                  <p className="text-brand-cyan text-[10px] font-black uppercase tracking-[0.4em] mb-8">About EVERYANGLE</p>
                  <h2 className="font-display text-4xl md:text-6xl font-bold mb-10 italic">A signal layer for <span className="text-brand-cyan">every store you run.</span></h2>
                  <div className="space-y-6 text-slate-400 leading-relaxed font-medium">
-                    <p>EVERYANGLE is a Vision AI company. We turn cameras retailers already own into a continuous, decision-grade signal layer for store performance.</p>
+                    <p>EVERYANGLE is a Vision AI company. We turn cameras retailers already own into a live signal layer for store performance — calibrated, anonymized, and built for action on the floor.</p>
                     <p>Customer journeys, footfall, queues, conversion, dwell, demographic split, labor utilisation — measured live, on every site, no new sensors.</p>
                     <p>The physical store deserves the same observability digital commerce has had for fifteen years. We're closing the gap.</p>
                  </div>

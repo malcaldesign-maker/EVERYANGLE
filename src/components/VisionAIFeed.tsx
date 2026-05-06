@@ -22,7 +22,7 @@ export default function VisionAIFeed() {
     { 
       label: "Deliver Logic", 
       title: "Retail Intelligence", 
-      desc: "Converting video into decision-grade behavioral data.",
+      desc: "Video converted into behavioural data your team can act on by lunch.",
       icon: <BarChart3 size={24} />,
       color: "text-brand-accent",
       bg: "bg-brand-accent/10"

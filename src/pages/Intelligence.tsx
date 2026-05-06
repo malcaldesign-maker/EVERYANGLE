@@ -112,7 +112,7 @@ export default function Intelligence() {
             {[
               { 
                 title: "Trusted Conversion", 
-                desc: "Accurate traffic enables real sales conversion measurement. Moving from basic footfall to decision-grade revenue signals.",
+                desc: "Accurate traffic, divided by real transactions. Move from a turnstile guess to a conversion number you can stake a decision on.",
                 metric: "Identity Corrected",
                 accent: "text-brand-primary"
               },
