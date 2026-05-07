@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { Signal, Menu, X, Check } from 'lucide-react';
+import { Menu, X, Check } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { ReactNode, useState, useEffect, FormEvent } from 'react';
 import ScrollProgress from './ScrollProgress';
@@ -75,14 +75,12 @@ export default function Layout({ children }: LayoutProps) {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 group" aria-label="EVERYANGLE home">
-            <motion.div
-              animate={{ rotate: [0, 10, 0] }}
-              transition={{ duration: 4, repeat: Infinity }}
-            >
-              <Signal className="text-brand-primary fill-brand-primary group-hover:scale-110 transition-transform" size={24} />
-            </motion.div>
-            <span className="font-display text-xl font-bold tracking-tight text-white">EVERYANGLE</span>
+          <Link to="/" className="flex items-center group" aria-label="EVERYANGLE home">
+            <img
+              src="/logo-white.png"
+              alt="EVERYANGLE"
+              className="h-8 w-auto group-hover:opacity-90 transition-opacity"
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-10" aria-label="Primary">
@@ -143,9 +141,8 @@ export default function Layout({ children }: LayoutProps) {
               aria-label="Mobile navigation"
             >
               <div className="flex items-center justify-between px-6 py-6 border-b border-white/5">
-                <div className="flex items-center gap-2">
-                  <Signal className="text-brand-primary fill-brand-primary" size={20} />
-                  <span className="font-display text-lg font-bold tracking-tight text-white">EVERYANGLE</span>
+                <div className="flex items-center">
+                  <img src="/logo-white.png" alt="EVERYANGLE" className="h-7 w-auto" />
                 </div>
                 <button
                   type="button"
@@ -206,9 +203,8 @@ export default function Layout({ children }: LayoutProps) {
           <div className="grid lg:grid-cols-5 gap-16 mb-24">
             {/* Brand Column */}
             <div className="lg:col-span-2">
-              <Link to="/" className="flex items-center gap-2 mb-10 group" aria-label="EVERYANGLE home">
-                <Signal className="text-brand-primary fill-brand-primary" size={24} />
-                <span className="font-display text-2xl font-bold tracking-tight text-white">EVERYANGLE</span>
+              <Link to="/" className="flex items-center mb-10 group" aria-label="EVERYANGLE home">
+                <img src="/logo-white.png" alt="EVERYANGLE" className="h-9 w-auto" />
               </Link>
               <p className="text-lg text-slate-400 font-medium mb-12 max-w-sm">
                 The operating system for physical retail. Built on the cameras you already own.
