@@ -60,25 +60,23 @@ export default function Company() {
     }
   ];
 
-  // NOTE: replace these placeholder Unsplash URLs with real headshots
-  // hosted in /public/team/ (e.g. /team/david.jpg) before publishing.
   const team = [
     {
       name: "David Owens",
       role: "Founder & CEO",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop",
+      image: "/team/David.jpg",
       bio: "David leads the overall vision, strategy, and commercial direction of EVERYANGLE. With a background in scaling high-growth technology companies, he created the platform from a belief that the physical store has been underserved by technology for too long, focusing on closing the 'instrumentation gap' between digital and physical retail."
     },
     {
       name: "Brian Martin",
       role: "VP Product",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
+      image: "/team/brian.jpg",
       bio: "Brian leads product strategy and technical direction at EVERYANGLE. He is responsible for translating the complex needs of enterprise retailers into a scalable Vision AI platform, ensuring every insight — from traffic to conversion — is calibrated, audit-ready, and built to drive operational decisions on the floor."
     },
     {
       name: "Malachy Callan",
       role: "Commercial Strategy & Growth",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1973&auto=format&fit=crop",
+      image: "/team/Malachy.jpg",
       bio: "Malachy leads EVERYANGLE's commercial expansion and strategic partnerships. He works closely with global retailers and technology partners like Cisco and Meraki to help them unlock the hidden value in their existing camera infrastructure, driving measurable ROI across their entire store estate."
     }
   ];
