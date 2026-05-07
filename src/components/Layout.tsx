@@ -79,7 +79,7 @@ export default function Layout({ children }: LayoutProps) {
             <img
               src="/logo-white.png"
               alt="EVERYANGLE"
-              className="max-h-5 max-w-[200px] w-auto h-auto object-contain group-hover:opacity-90 transition-opacity"
+              className="max-h-4 max-w-[170px] w-auto h-auto object-contain group-hover:opacity-90 transition-opacity"
             />
           </Link>
 
@@ -142,7 +142,7 @@ export default function Layout({ children }: LayoutProps) {
             >
               <div className="flex items-center justify-between px-6 py-6 border-b border-white/5">
                 <div className="flex items-center">
-                  <img src="/logo-white.png" alt="EVERYANGLE" className="max-h-5 max-w-[200px] w-auto h-auto object-contain" />
+                  <img src="/logo-white.png" alt="EVERYANGLE" className="max-h-4 max-w-[170px] w-auto h-auto object-contain" />
                 </div>
                 <button
                   type="button"
