@@ -76,6 +76,12 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
+            <img
+              src="/logo-white.png"
+              alt="EVERYANGLE"
+              className="h-10 md:h-14 w-auto mx-auto mb-8 max-w-[320px] md:max-w-[460px]"
+            />
+
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-brand-secondary text-[10px] font-bold uppercase tracking-[0.3em] mb-10 shadow-[0_0_15px_rgba(168,85,247,0.2)]">
               <Brain size={12} className="text-brand-secondary" />
               Vision AI · Agentic AI · For Physical Retail
