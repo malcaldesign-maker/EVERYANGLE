@@ -79,7 +79,7 @@ export default function Layout({ children }: LayoutProps) {
             <img
               src="/logo-white.png"
               alt="EVERYANGLE"
-              className="h-8 w-auto group-hover:opacity-90 transition-opacity"
+              className="h-5 md:h-6 w-auto max-w-[180px] md:max-w-[220px] group-hover:opacity-90 transition-opacity"
             />
           </Link>
 
@@ -142,7 +142,7 @@ export default function Layout({ children }: LayoutProps) {
             >
               <div className="flex items-center justify-between px-6 py-6 border-b border-white/5">
                 <div className="flex items-center">
-                  <img src="/logo-white.png" alt="EVERYANGLE" className="h-7 w-auto" />
+                  <img src="/logo-white.png" alt="EVERYANGLE" className="h-5 w-auto max-w-[180px]" />
                 </div>
                 <button
                   type="button"
@@ -204,7 +204,7 @@ export default function Layout({ children }: LayoutProps) {
             {/* Brand Column */}
             <div className="lg:col-span-2">
               <Link to="/" className="flex items-center mb-10 group" aria-label="EVERYANGLE home">
-                <img src="/logo-white.png" alt="EVERYANGLE" className="h-9 w-auto" />
+                <img src="/logo-white.png" alt="EVERYANGLE" className="h-6 w-auto max-w-[220px]" />
               </Link>
               <p className="text-lg text-slate-400 font-medium mb-12 max-w-sm">
                 The operating system for physical retail. Built on the cameras you already own.
