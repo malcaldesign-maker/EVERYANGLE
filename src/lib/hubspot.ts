@@ -1,18 +1,20 @@
 /**
  * Tiny HubSpot Forms-API helper.
  *
- * Two env vars wire this up — set them in Vercel project settings (or .env.local
- * for local dev):
+ * Env vars (set in Vercel project settings, and .env.local for local dev):
  *
  *   VITE_HUBSPOT_PORTAL_ID            — your HubSpot portal ID (numeric)
  *   VITE_HUBSPOT_CONTACT_FORM_GUID    — form GUID for the main contact form
  *   VITE_HUBSPOT_NEWSLETTER_FORM_GUID — form GUID for the newsletter / 1-pager signup
+ *   VITE_HUBSPOT_REGION               — optional, e.g. "eu1" for EU portals; leave
+ *                                        unset for US portals
  *
- * If either var is missing, submitForm() returns { ok: false, configured: false }
- * so the UI can fall back to the existing Formspree-or-mailto path.
+ * If portal ID or the relevant form GUID is missing, submitToHubspot() returns
+ * { ok: false, configured: false } so the UI can fall back gracefully.
  */
 
 const PORTAL_ID = import.meta.env.VITE_HUBSPOT_PORTAL_ID as string | undefined;
+const REGION = (import.meta.env.VITE_HUBSPOT_REGION as string | undefined)?.trim() || '';
 
 export type HubspotFormType = 'contact' | 'newsletter';
 
@@ -36,9 +38,12 @@ export async function submitToHubspot(
     return { ok: false, configured: false, reason: 'HubSpot is not configured.' };
   }
 
+  // EU portals use api-eu1.hsforms.com; US (default) uses api.hsforms.com.
+  const apiHost = REGION ? `api-${REGION}.hsforms.com` : 'api.hsforms.com';
+
   try {
     const res = await fetch(
-      `https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${guid}`,
+      `https://${apiHost}/submissions/v3/integration/submit/${PORTAL_ID}/${guid}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
