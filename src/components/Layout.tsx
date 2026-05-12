@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ReactNode, useState, useEffect, FormEvent } from 'react';
 import ScrollProgress from './ScrollProgress';
 import CookieBanner from './CookieBanner';
+import PopupLead from './PopupLead';
 import { submitToHubspot } from '../lib/hubspot';
 
 interface LayoutProps {
@@ -299,6 +300,7 @@ export default function Layout({ children }: LayoutProps) {
       </footer>
 
       <CookieBanner />
+      <PopupLead />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { Mail, MapPin, Send, MessageSquare, Loader2, AlertTriangle } from 'lucid
 import { useState, FormEvent } from 'react';
 import { useMeta } from '../hooks/useMeta';
 import { submitToHubspot } from '../lib/hubspot';
+import { markPopupDismissed } from '../components/PopupLead';
 
 type Status = 'idle' | 'submitting' | 'submitted' | 'error';
 
@@ -45,6 +46,7 @@ export default function Contact() {
       { name: 'message', value: data.message || '' },
     ]);
     if (hs.ok === true) {
+      markPopupDismissed();
       setStatus('submitted');
       form.reset();
       return;
@@ -64,6 +66,7 @@ export default function Contact() {
           body: formData,
         });
         if (!res.ok) throw new Error(`Server responded with ${res.status}`);
+        markPopupDismissed();
         setStatus('submitted');
         form.reset();
       } catch (err) {
@@ -90,6 +93,7 @@ export default function Contact() {
     ];
     const body = encodeURIComponent(lines.join('\n'));
     window.location.href = `mailto:${FALLBACK_EMAIL}?subject=${subject}&body=${body}`;
+    markPopupDismissed();
     setStatus('submitted');
     form.reset();
   };
