@@ -169,11 +169,12 @@ export default function Contact() {
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="contact-stores" className="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Store Count</label>
-                      <select id="contact-stores" name="stores" defaultValue="1-10 Locations" className="w-full bg-brand-navy border border-white/10 rounded-xl px-6 py-4 text-white focus:border-brand-primary transition-all outline-none appearance-none">
-                        <option>1-10 Locations</option>
+                      <select id="contact-stores" name="stores" defaultValue="10-50 Locations" className="w-full bg-brand-navy border border-white/10 rounded-xl px-6 py-4 text-white focus:border-brand-primary transition-all outline-none appearance-none">
+                        <option>Below 10 Locations</option>
                         <option>10-50 Locations</option>
-                        <option>50-200 Locations</option>
-                        <option>200+ Locations</option>
+                        <option>50-250 Locations</option>
+                        <option>250-1,000 Locations</option>
+                        <option>1,000+ Locations</option>
                       </select>
                     </div>
                   </div>
